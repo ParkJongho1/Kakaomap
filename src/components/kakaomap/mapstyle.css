@@ -8,10 +8,10 @@
   .box {
     width: 100%;
     height: 20vh;
-    display: flex;
   }
   .box .acourse {
-    width: 50%;
+    width: 100%;
+    height: 100%;
     background: rgb(148, 248, 161);
     color: #fff;
     display: flex;
@@ -19,14 +19,47 @@
     justify-content: center;
     font-size: 1.5em;
     font-weight: bold;
+    cursor: pointer;
   }
-  .box .bcourse {
-    width: 50%;
-    background: rgb(32, 226, 233);
-    color: #000;
+  .modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 1000;
+  }
+  .modal_wrap {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5em;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .modal_wrap button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: #000;
+    color: #fff;
     font-weight: bold;
+  }
+  
+  .modal_desc {
+    width: 20vw;
+    height: 60vh;
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+  }
+  .modal_desc ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    font-size: 20px;
   }

@@ -10,6 +10,9 @@ export default function SelectMap() {
     })
 
   return (
-    <div>SelectMap</div>
+    <>
+      <div>지도맵 검색</div>
+      <div></div>
+    </>
   )
 }

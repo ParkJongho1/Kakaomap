@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './mapstyle.css';
 
 
@@ -45,13 +45,33 @@ export default function KakaoMap(){
         }); 
     }, []);
 
+    const [modal, setModal] = useState(false);
+  
+    const toggleModal = () => {
+      setModal(!modal);
+    }
+
     return (
         <div className="App">
           <div id="map" className="map"/>
           <div className="box">
-            <div className="acourse">A코스</div>
-            <div className="bcourse">B코스</div>
+            <div className="acourse" onClick={ toggleModal }>A코스</div>
           </div>
+          {modal && (
+                <div className="modal">
+                <div className="modal_wrap">
+                    <div className="modal_desc">
+                        <ul>
+                            <li>A코스</li>
+                            <li>B코스</li>
+                            <li>C코스</li>
+                            <li>D코스</li>
+                        </ul>
+                    </div>
+                <button onClick={ toggleModal }>닫기</button>
+                </div>
+            </div>
+            )}
         </div>
       );
 }
