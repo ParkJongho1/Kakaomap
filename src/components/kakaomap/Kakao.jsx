@@ -47,7 +47,7 @@ export default function KakaoMap() {
     });
   }, []);
 
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
   // const toggleModal = () => {
   //   setModal(!modal);
