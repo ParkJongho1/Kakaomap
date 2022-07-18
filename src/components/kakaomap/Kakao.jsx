@@ -49,9 +49,9 @@ export default function KakaoMap() {
 
   const [modal, setModal] = useState(false);
 
-  const toggleModal = () => {
-    setModal(!modal);
-  };
+  // const toggleModal = () => {
+  //   setModal(!modal);
+  // };
 
   return (
     <div className="App">
